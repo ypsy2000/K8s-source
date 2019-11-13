@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: shell
+  namespace: networkpolicy
+  labels:
+    name: shell
+    lab: network-policy
+spec:
+  containers:
+  - name: shell
+    image: busybox
+    command: ["sh", "-c", "sleep 3600"]

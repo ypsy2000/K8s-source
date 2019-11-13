@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: date-printer
+  labels:
+    name: date-printer
+spec:
+  containers:
+  - name: date-printer
+    image: busybox
+    command: [ "sh", "-c", "while [ true ]; do date; sleep 1; done"]

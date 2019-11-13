@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: qos-pod
+  labels:
+    name: qos-pod
+spec:
+  containers:
+  - name: qos-pod
+    image: vish/stress
+    args: ["--mem-total", "200Mi"]
+    resources:
+      limits:
+        memory: "200Mi"
+        cpu: "500m"

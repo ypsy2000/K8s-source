@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whoami
+  namespace: whoami
+spec:
+  selector:
+    matchLabels:
+      app: whoami
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: whoami
+    spec:
+      containers:
+      - name: whoami
+        image: containous/whoami
+        ports:
+        - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: whoami
+  namespace: whoami
+spec:
+  selector:
+    name: whoami
+  ports:
+  - port: 80
+    targetPort: 80

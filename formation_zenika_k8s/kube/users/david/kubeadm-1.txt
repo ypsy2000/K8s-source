@@ -1,0 +1,21 @@
+AWS Instances:
+
+Name:         david-node-0
+  IP:         3.121.109.165
+  Private IP: 10.0.11.63
+  Public DNS: ec2-3-121-109-165.eu-central-1.compute.amazonaws.com
+
+Name:         david-node-1
+  IP:         35.158.124.237
+  Private IP: 10.0.21.125
+  Public DNS: ec2-35-158-124-237.eu-central-1.compute.amazonaws.com
+
+Name:         david-node-2
+  IP:         18.184.240.143
+  Private IP: 10.0.33.143
+  Public DNS: ec2-18-184-240-143.eu-central-1.compute.amazonaws.com
+
+Name:         david-node-3
+  IP:         3.120.173.212
+  Private IP: 10.0.1.204
+  Public DNS: ec2-3-120-173-212.eu-central-1.compute.amazonaws.com

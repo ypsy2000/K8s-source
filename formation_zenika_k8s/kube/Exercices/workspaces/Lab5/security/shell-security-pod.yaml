@@ -1,0 +1,20 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: shell-security
+  labels:
+    name: shell-security
+spec:
+  securityContext:
+    runAsUser: 37
+    supplementalGroups: [11, 18, 19, 100]
+  containers:
+  - name: shell-security
+    image: busybox
+    command: ["sh", "-c", "sleep 3600"]
+    volumeMounts:
+    - mountPath: /tmp
+      name: tmp
+  volumes:
+  - name: tmp
+    emptyDir: {}

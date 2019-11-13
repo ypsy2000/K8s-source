@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: pods-high
+  namespace: quotas
+spec:
+  hard:
+    cpu: "4"
+    memory: 2Gi
+    pods: "4"
+

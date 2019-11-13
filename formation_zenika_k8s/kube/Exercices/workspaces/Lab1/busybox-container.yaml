@@ -1,0 +1,10 @@
+---
+metadata:
+  name: busybox
+image:
+  image: busybox
+command:
+- sleep
+- 3600
+linux: {}
+

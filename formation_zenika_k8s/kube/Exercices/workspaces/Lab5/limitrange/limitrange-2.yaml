@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: limitrange-2
+  namespace: limitrange
+spec:
+  limits:
+  - min:
+      cpu: 500m
+      memory: 16Mi
+    max:
+      cpu: 1
+      memory: 64Mi
+    type: Container
+

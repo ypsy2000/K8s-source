@@ -1,0 +1,33 @@
+AWS Instances:
+
+Name:         yves-node-0
+  IP:         3.123.153.226
+  Private IP: 10.0.27.14
+  Public DNS: ec2-3-123-153-226.eu-central-1.compute.amazonaws.com
+
+Name:         yves-node-1
+  IP:         3.123.142.252
+  Private IP: 10.0.44.82
+  Public DNS: ec2-3-123-142-252.eu-central-1.compute.amazonaws.com
+
+Name:         yves-node-2
+  IP:         18.185.89.245
+  Private IP: 10.0.14.206
+  Public DNS: ec2-18-185-89-245.eu-central-1.compute.amazonaws.com
+
+Name:         yves-node-3
+  IP:         52.29.12.93
+  Private IP: 10.0.18.205
+  Public DNS: ec2-52-29-12-93.eu-central-1.compute.amazonaws.com
+
+ssh -i yves-kube-ops-vpc3.pem ubuntu@3.123.153.226
+scp -i yves-kube-ops-vpc3.pem -r ../../Exercices/ ubuntu@3.123.153.226:
+
+install sur les vm
+docker
+kubelet
+kubectl
+kubeadm
+
+
+

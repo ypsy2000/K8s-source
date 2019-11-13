@@ -1,0 +1,23 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: go-metrics
+  labels:
+    name: go-metrics
+spec:
+  containers:
+  - name: go-metrics
+    image: pyaillet/go-metrics
+    ports:
+      - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: go-metrics
+spec:
+  selector:
+    name: go-metrics
+  ports:
+  - port: 80
+    targetPort: 80

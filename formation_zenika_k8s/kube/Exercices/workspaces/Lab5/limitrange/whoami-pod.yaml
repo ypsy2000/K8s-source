@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: whoami
+  namespace: limitrange
+  labels:
+    name: whoami
+    lab: limitrange
+spec:
+  containers:
+  - name: whoami
+    image: containous/whoami
+    ports:
+      - containerPort: 80
+

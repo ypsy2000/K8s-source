@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: shell-kubectl
+  namespace: rbac
+  labels:
+    name: shell-kubectl
+spec:
+  containers:
+  - name: shell-kubectl
+    image: lachlanevenson/k8s-kubectl:v1.13.2
+    command: ["sh", "-c", "sleep 3600"]

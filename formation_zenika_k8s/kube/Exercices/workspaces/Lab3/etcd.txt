@@ -1,0 +1,3 @@
+get all the keys in etcd:
+
+etcdctl $SSL_OPTS --endpoints https://$ENDPOINT:2379 get / --prefix --keys-only

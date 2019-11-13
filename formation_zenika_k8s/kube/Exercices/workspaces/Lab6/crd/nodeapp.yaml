@@ -1,0 +1,7 @@
+kind: NodeApp
+apiVersion: "zenika.com/v1"
+metadata:
+  name: myapp
+spec:
+  replicas: 3
+  image: myapp

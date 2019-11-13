@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: wordpress-backup
+  labels:
+    app: wordpress
+spec:
+  containers:
+  - name: wordpress-backup
+    image: busybox
+    command:
+    - sh
+    - -c
+    - "sleep 3600"

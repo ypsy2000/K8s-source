@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: connect-etcd
+spec:
+  containers:
+  - name: connect-etcd
+    image: gcr.io/etcd-development/etcd:v3.2.7
+    command: [ sh ]
+    args: [ "-c", "etcdctl $(SSL_OPTS) --debug=true --endpoints https://$(ENDPOINT):2379 endpoint status && exec tail -f /dev/null" ]
+    env:
+    - name: ETCDCTL_API
+      value: '3'
+    - name: ENDPOINT
+      value: '$ENDPOINT'
+    - name: SSL_OPTS
+      value: "--cacert=/etc/ssl/etcd-connect/ca.crt --cert=/etc/ssl/etcd-connect/apiserver-etcd-client.crt --key=/etc/ssl/etcd-connect/apiserver-etcd-client.key"
+    volumeMounts:
+    - name: etcd-creds
+      mountPath: "/etc/ssl/etcd-connect"
+      readOnly: true
+  volumes:
+  - name: etcd-creds
+    secret:
+      secretName: etcd-creds

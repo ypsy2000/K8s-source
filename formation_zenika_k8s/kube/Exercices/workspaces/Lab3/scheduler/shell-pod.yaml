@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: shell
+  labels:
+    name: shell
+spec:
+  schedulerName: default-scheduler
+  containers:
+  - name: shell
+    image: ubuntu
+    command: ["sh", "-c", "sleep 3600"]

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: mem-limit-range
+  namespace: limitrange
+spec:
+  limits:
+  - default:
+      memory: 64Mi
+      cpu: 500m
+    defaultRequest:
+      memory: 32Mi
+      cpu: 500m
+    type: Container
+

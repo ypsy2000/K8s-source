@@ -1,0 +1,29 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: whoami
+  namespace: networkpolicy
+  labels:
+    name: whoami
+    lab: network-policy
+spec:
+  containers:
+  - name: whoami
+    image: containous/whoami
+    ports:
+      - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: whoami
+  namespace: networkpolicy
+  labels:
+    lab: network-policy
+spec:
+  selector:
+    name: whoami
+  ports:
+  - port: 80
+    targetPort: 80
+

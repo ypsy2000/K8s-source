@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: shell
+  labels:
+    name: shell
+spec:
+  containers:
+  - name: shell
+    image: busybox
+    command: [ "sh", "-c", "sleep 3600" ]

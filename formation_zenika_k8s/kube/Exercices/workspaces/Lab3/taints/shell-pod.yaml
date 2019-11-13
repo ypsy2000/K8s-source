@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: shell
+  labels:
+    name: shell
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: node-0
+  containers:
+  - name: shell
+    image: ubuntu
+    command:
+      - sh
+      - -c
+      - "sleep 3600"

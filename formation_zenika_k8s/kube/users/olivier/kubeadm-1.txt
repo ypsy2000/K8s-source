@@ -1,0 +1,21 @@
+AWS Instances:
+
+Name:         olivier-node-0
+  IP:         35.159.9.160
+  Private IP: 10.0.41.92
+  Public DNS: ec2-35-159-9-160.eu-central-1.compute.amazonaws.com
+
+Name:         olivier-node-1
+  IP:         18.185.79.190
+  Private IP: 10.0.8.148
+  Public DNS: ec2-18-185-79-190.eu-central-1.compute.amazonaws.com
+
+Name:         olivier-node-2
+  IP:         18.194.249.11
+  Private IP: 10.0.29.234
+  Public DNS: ec2-18-194-249-11.eu-central-1.compute.amazonaws.com
+
+Name:         olivier-node-3
+  IP:         18.194.243.154
+  Private IP: 10.0.45.148
+  Public DNS: ec2-18-194-243-154.eu-central-1.compute.amazonaws.com
